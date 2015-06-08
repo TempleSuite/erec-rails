@@ -11,8 +11,15 @@
 // about supported directives.
 //
 //= require jquery
-//= require 'bootstrap-sass-official'
+//= require jquery-ui
+//= require jquery-validate
+//= require select2
+//= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
 //= require dropzone
+//= require jquery-flot
+//= require dygraphs
+//= require raphael
+//= require morrisjs
 //= require_tree .

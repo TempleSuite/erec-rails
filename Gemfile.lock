@@ -182,11 +182,25 @@ GEM
       railties (= 4.2.1)
       sprockets-rails
     rails-assets-angular (1.4.0)
-    rails-assets-bootstrap-sass-official (3.3.4)
-      rails-assets-jquery (>= 1.9.0)
+    rails-assets-bootstrap (3.3.4)
+      rails-assets-jquery (>= 1.9.1)
     rails-assets-dropzone (4.0.1)
+    rails-assets-dygraphs (1.1.1)
     rails-assets-font-awesome (4.3.0)
     rails-assets-jquery (2.1.4)
+    rails-assets-jquery-flot (0.8.3)
+      rails-assets-jquery (>= 1.2.6)
+    rails-assets-jquery-ui (1.11.4)
+      rails-assets-jquery (>= 1.6)
+    rails-assets-jquery-validate (1.13.1)
+      rails-assets-jquery (>= 1.6.4)
+    rails-assets-mocha (1.17.1)
+    rails-assets-morrisjs (0.5.1)
+      rails-assets-jquery (>= 2.1.0)
+      rails-assets-mocha (~> 1.17.1)
+      rails-assets-raphael (>= 2.0)
+    rails-assets-raphael (2.1.4)
+    rails-assets-select2 (4.0.0)
     rails-assets-spectrum (1.7.0)
       rails-assets-jquery (>= 1.7.2)
     rails-deprecated_sanitizer (1.0.3)
@@ -319,9 +333,16 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.2.1)
   rails-assets-angular!
-  rails-assets-bootstrap-sass-official!
+  rails-assets-bootstrap!
   rails-assets-dropzone!
+  rails-assets-dygraphs!
   rails-assets-font-awesome!
+  rails-assets-jquery-flot!
+  rails-assets-jquery-ui!
+  rails-assets-jquery-validate!
+  rails-assets-morrisjs!
+  rails-assets-raphael!
+  rails-assets-select2!
   rails-assets-spectrum!
   rails_12factor
   rspec-rails

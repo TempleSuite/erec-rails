@@ -67,9 +67,16 @@ group :development, :test do
 end
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap-sass-official'
+  gem 'rails-assets-bootstrap'
   gem 'rails-assets-angular'
   gem 'rails-assets-font-awesome'
   gem 'rails-assets-spectrum'
   gem 'rails-assets-dropzone'
+  gem 'rails-assets-jquery-flot'
+  gem 'rails-assets-dygraphs'
+  gem 'rails-assets-raphael'
+  gem 'rails-assets-morrisjs'
+  gem 'rails-assets-jquery-ui'
+  gem 'rails-assets-jquery-validate'
+  gem 'rails-assets-select2'
 end
