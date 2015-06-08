@@ -7,4 +7,8 @@ RUN mkdir /code /bundle
 RUN gem install bundler
 
 WORKDIR /code
-ADD . /code
+ADD Gemfile* /code/
+
+ENV BUNDLE_GEMFILE=/code/Gemfile \
+  BUNDLE_JOBS=2 \
+  BUNDLE_PATH=/bundle

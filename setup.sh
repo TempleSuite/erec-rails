@@ -1,4 +1,4 @@
 bash docker-compose.sh build
-bash docker-compose.sh run web bundle install --path /code/vendor/bundle
-bash docker-compose.sh run web rake db:create
-bash docker-compose.sh run web rake db:migrate
+bash docker-compose.sh run --rm web bundle install
+bash docker-compose.sh run --rm web bundle exec rake db:create
+bash docker-compose.sh run --rm web bundle exec rake db:migrate

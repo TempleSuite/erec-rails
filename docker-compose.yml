@@ -9,9 +9,17 @@ web:
   command: bundle exec rails s -p 3000 -b '0.0.0.0'
   volumes:
     - .:/code
+  volumes_from:
+    - bundle
   ports:
     - '3000:3000'
   links:
     - db
   environment:
     - RAILS_ENV=development
+    - BUNDLE_APP_CONFIG=/code/.bundle
+    - BUNDLE_PATH=/code/vendor/bundle
+bundle:
+  image: busybox
+  volumes:
+    - /bundle
