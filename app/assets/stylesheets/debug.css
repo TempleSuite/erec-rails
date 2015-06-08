@@ -1,0 +1,45 @@
+.debug-panel .btn.debug-panel-open {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  z-index: 9999;
+
+  margin-bottom: 0;
+}
+
+.debug-panel .debug-panels {
+  position: fixed;
+  opacity: 0.95;
+  bottom: 25px;
+  right: 0;
+
+  z-index: 9999;
+
+  display: none;
+
+  max-width: 50vw;
+  max-height: 90vh;
+
+  overflow: scroll;
+}
+
+.debug-panels .debug-panel-section:last-child {
+  margin-bottom: 0;
+}
+
+.debug-panel .debug-panels.open {
+  display: block;
+}
+
+.debug-panel-section .panel-body {
+  display: none;
+}
+
+.debug-panel-section.open .panel-body {
+  display: block;
+}
+
+.debug-panel pre {
+  font-size: 80%;
+}

@@ -1,0 +1,18 @@
+<%
+  ###
+   # Single Search Result
+   #
+   # @param real 'rating'    The real number value of the rating
+   # @return null
+   #
+   # @author Adrian Estergaard <theturtlemoves@gmail.com>
+  ###
+
+  rating ||= 3.0
+%>
+
+
+Rating:
+<%= rating.to_i.times.map { "<i class='fa fa-star'></i> " }.join.html_safe %>
+<%= "<i class='fa fa-star-half-o'></i>".html_safe if rating % 1 != 0 %>
+<%= (5 - rating.to_i).times.map { "<i class='fa fa-star-o'></i> " }.join.html_safe %>

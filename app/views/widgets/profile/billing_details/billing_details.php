@@ -1,0 +1,395 @@
+<header>
+  <?php render_partial('edit_button', array('title' => 'billing-details')); ?>
+  <span class="widget-icon"> <i class="fa fa-search txt-color-white"></i> </span>
+  <h2> Billing Details </h2>
+</header>
+
+<!-- widget div-->
+<div>
+  <div class="widget-body widget-hide-overflow no-padding">
+    <!-- content goes here -->
+    <div class="widget-body no-padding">
+      <div class="panel-body well">
+
+        <!-- widget billing details -->
+        <form action="" id="billing-details-form" class="smart-form" novalidate="novalidate">
+          <!-- search fields -->
+          <fieldset id="billing-details">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-md">
+                  <label class="label">Name on Card</label>
+                  <label class="input">
+                    <input type="text" name="profile-billing-card-name" placeholder="John Smith">
+                  </label>
+                </div>
+
+                <div class="responsive-box-lg">
+                  <label class="label">Billing Address (if different from main address)</label>
+                  <label class="input">
+                    <input type="text" name="profile-billing-address" placeholder="Unit #987 123 Lane Drive London ON Canada, V5L 1W6">
+                  </label>
+                </div>
+
+                <div class="col-xs-2 pull-right">
+                  <label class="label"> &nbsp; </label>
+                  <button type="submit" class="btn btn-primary btn-sm" id="billing-history">Billing History</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-sm">
+                  <label class="label">Payment Method</label>
+
+                  <label class="select">
+                    <select name="card-type" id="card-type">
+                      <option value="visa" selected>VISA</option>
+                      <option value="mc">Mastercard</option>
+                      <option value="ax">American Express</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="responsive-box-md">
+                  <label class="label"> &nbsp; </label>
+                  <label class="input">
+                    <input type="text" name="profile-card-number" placeholder="**** **** **** 1111">
+                  </label>
+                </div>
+
+                <div class="responsive-box-md">
+                  <label class="label"> &nbsp; </label>
+
+                  <label>
+                    <select name="expiry-month" id="expiry-month">
+                      <option value="01" selected>01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select> <i></i>
+                  </label>
+
+                  <label>
+                    <select name="expiry-year" id="expiry-year">
+                      <option value="2015" selected>2015</option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select> <i></i>
+                  </label>
+                </div>
+
+                <div class="responsive-box-sm">
+                  <label class="label">Code</label>
+                  <label class="input">
+                    <input type="text" name="profile-card-number" placeholder="123">
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <form action="" class="smart-form " id="form-billing-history" novalidate="novalidate">
+              <div class="row billing-history" style="display: none; margin-top: 12px;">
+                <div class="col-xs-12">
+                  <div class="responsive-box-sm" style="padding-right: 5px;">
+                    <h5>History for: </h5>
+                  </div>
+                  <div class="responsive-box-md">
+                    <label class="select widget lean-right">
+                      <select name="gl-list" id="gl-list">
+                        <option>All</option>
+                        <option value="0007">Yourself</option>
+                        <option value="0009">Dependent 1</option>
+                        <option value="0023">Dependent 2</option>
+                        <option value="0067">Dependent 3</option>
+                      </select> <i></i>
+                    </label>
+                  </div>
+                  <div class="responsive-box-md">
+                    <div class="input-group">
+                      <input type="text" name="start-date" id="start-date" placeholder=" Start date" class="form-control datepicker" data-dateformat="dd/mm/yy">
+                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                  </div>
+                  <div class="responsive-box-md">
+                    <div class="input-group">
+                      <input type="text" name="end-date" id="end-date" placeholder=" End date" class="form-control datepicker" data-dateformat="dd/mm/yy">
+                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                  </div>
+                  <div class="responsive-box-xs pull-right">
+                    <button type='submit' class='btn btn-primary btn-sm' id="gl-update">Update</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row billing-history" style="display: none;">
+                <div class="col-xs-12">
+                  <div class="responsive-box-xl" style="max-width: 100%;">
+                    <table class="table table-striped table-hover table-condensed">
+                      <thead>
+                        <tr>
+                          <th>Date &amp; Time</th>
+                          <th>Entity</th>
+                          <th>Issuer</th>
+                          <th>User</th>
+                          <th>Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody id="billing-data">
+                        <tr>
+                          <td>Jan 01, 2015</td>
+                          <td>Walk/Run Club</td>
+                          <td>Lisa Jensen</td>
+                          <td>Steve Smith</td>
+                          <td>
+                            $234.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Jan 06, 2015</td>
+                          <td>Sit and be Fit</td>
+                          <td>Sabine Cooperman</td>
+                          <td>Eileen Green</td>
+                          <td>
+                            $110.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Feb 19, 2015</td>
+                          <td>Dance</td>
+                          <td>Chelsea Hindle</td>
+                          <td>Sahra Dilmaghanyan</td>
+                          <td>
+                            $216.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Feb 23, 2015</td>
+                          <td>Mountain Biking</td>
+                          <td>Aaron Cooperman</td>
+                          <td>Hourash Falati</td>
+                          <td>
+                            $160.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Mar 09, 2015</td>
+                          <td>Junior Tennis Program</td>
+                          <td>Sabine Cooperman</td>
+                          <td>Rick Ayling</td>
+                          <td>
+                            $100.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Mar 14, 2015</td>
+                          <td>TBK Session 5</td>
+                          <td>Lucinda Benton</td>
+                          <td>Adrian Estergaard</td>
+                          <td>
+                            $240.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Apr 06, 2015</td>
+                          <td>TBK Session 6 (Refund)</td>
+                          <td>Chelsea Hindle</td>
+                          <td>Carlos Esquivel</td>
+                          <td>
+                            -$140.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Apr 12, 2015</td>
+                          <td>Kayaking Session 2 (Refund)</td>
+                          <td>Lucinda Benton</td>
+                          <td>Sanjay Morar</td>
+                          <td>
+                            -$120.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Apr 22, 2015</td>
+                          <td>Pottery Basics</td>
+                          <td>Aaron Cooperman</td>
+                          <td>Christian Fenn</td>
+                          <td>
+                            $180.00
+                            <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+                              <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog fa-lg"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                                <li>
+                                  <a href="#"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row billing-history" style="display: none;">
+                <div class='col-xs-12'>
+                  <div class="btn-group display-inline pull-right text-align-left hidden-tablet" style="padding-right: 10px;">
+                    <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                      <li>
+                        <a href="#" class="lean-right"><i class="fa fa-file-pdf-o fa-lg fa-fw txt-color-blueLight"></i> <u>D</u>ownload all (pdf) </a>
+                      </li>
+                      <li>
+                        <a href="#" class="lean-right"><i class="fa fa-file-excel-o fa-lg fa-fw txt-color-blueLight"></i> <u>D</u>ownload all (csv) </a>
+                      </li>
+                      <li>
+                        <a href="#" class="lean-right"><i class="fa fa-print fa-lg fa-fw txt-color-blueLight"></i> <u>P</u>rint all </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="responsive-box-lg lean-right billing-amount">
+                    <div class="row subtotal">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-sm"style="text-align: right;">
+                          <strong>Subtotal:</strong>
+                        </div>
+                        <div class="responsive-box-sm lean-right" style="text-align: right; padding-right: 5px;">
+                          $980.00
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row taxes">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-sm"style="text-align: right;">
+                          <strong>Taxes:</strong>
+                        </div>
+                        <div class="responsive-box-sm lean-right" style="text-align: right; padding-right: 5px;">
+                          $117.60
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row total" style="padding-bottom: 35px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-sm"style="text-align: right;">
+                          <strong>Total:</strong>
+                        </div>
+                        <div class="responsive-box-sm lean-right" style="text-align: right; padding-right: 5px;">
+                          $1097.60
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+            <!-- Hidden Update Button Row -->
+            <?php render_partial('edit_row', array('title' => 'billing-details')); ?>
+            <!-- End Hidden Update Button Row -->
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- end content goes here -->
+  </div>
+</div>

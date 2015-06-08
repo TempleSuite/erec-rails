@@ -1,0 +1,75 @@
+%header#header
+  #logo-group
+    %span#logo= image_tag "logo/somewhere.png", alt: 'Any Title'
+  .pull-right
+    #hide-menu.btn-header.pull-right
+      %span
+        %a(href='#' title='Collapse Menu' data-action='toggleMenu')
+          %i.fa.fa-reorder
+
+    %ul#mobile-profile-img.header-dropdown-list.hidden-xs.padding-5
+      %li
+        %a.dropdown-toggle.no-margin.userdropdown(href='#' data-toggle='dropdown')
+          = image_tag 'avatars/John Doe.jpg', alt: 'John Doe', class: 'online'
+        %ul.dropdown-menu.pull-right
+          %li
+            = link_to '/profile', class: 'padding-10 padding-top-0 padding-bottom-0' do
+              %i.fa.fa-user
+              \<u>P</u>rofile
+          %li.divider
+          %li
+            = link_to '/login', class: 'padding-10 padding-top-5 padding-bottom-5', :'data-action' => 'userLogout' do
+              %i.fa.fa-sign-out.fa-lg
+              %strong
+                \<u>L</u>ogout
+
+
+    #logout.btn-header.transparent.pull-right
+      %span
+        = link_to '/login', title: 'Sign Out', :'data-action' => 'userLogout', :'data-logout-msg' => 'You can improve your security further after logging out by closing this opened browser' do
+          %i.fa.fa-sign-out
+
+    #search-mobile.btn-header.transparent.pull-right
+      %span
+        = link_to '#', title: 'Search' do
+          %i.fa.fa-search
+
+    %ul.header-dropdown-list.hidden-xs
+      %li
+        %a.dropdown-toggle(data-toggle='dropdown' href='#')
+          -# <img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-us" alt="United States"> <span> English (US) </span> <i class="fa fa-angle-down"></i> </a>
+        %ul.dropdown-menu.pull-right
+          %li.active
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-us" alt="United States"> English (US)</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-fr" alt="France"> Français</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-es" alt="Spanish"> Español</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-de" alt="German"> Deutsch</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-jp" alt="Japan"> ???</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-cn" alt="China"> ??</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-it" alt="Italy"> Italiano</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-pt" alt="Portugal"> Portugal</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-ru" alt="Russia"> ??????? ????</a>
+          %li
+            -# <a href="#"><img src="<?php echo ASSETS_URL; ?>/blank.gif" class="flag flag-kp" alt="Korea"> ???</a>
+
+    %ul.header-dropdown-list.user-role
+      %li
+        = link_to '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown' do
+          %span
+            = current_role || 'Member'
+            %i.fa.fa-angle-down
+        %ul.dropdown-menu.pull-right(role="menu")
+          %li.active
+            %a(data-role='developer' href='#') Developer
+          %li
+            %a(data-role='admin' href='#') Admin
+          %li
+            %a(data-role='member' href='#') Member

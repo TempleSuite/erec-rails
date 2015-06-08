@@ -1,0 +1,129 @@
+#ribbon
+  .row
+    .col-sm-6.col-xs-12
+      %span.ribbon-button-alignment
+        %span#refresh.btn.btn-ribbon(data-action='resetWidgets' data-title='refresh' rel='tooltip' data-placement='bottom' data-original-title='<i class="text-warning fa fa-warning"></i>' data-html='true' data-reset-msg='Would you like to RESET all you saved widgets and clear LocalStorage?')
+          %i.fa.fa-refresh
+      %ol.breadcrumb
+        / Auto generated
+  .row
+    .col-xs-12
+      %hr
+
+  .row
+    .col-xs-12
+      %form#search-form.smart-form(novalidate='novalidate')
+        %fieldset#search-fields
+          .row
+            .col-sm-1.col-xs-12
+              .responsive-box-sm
+                %p Search for:
+            .col-sm-11.col-xs-12
+              .responsive-box-md
+                %label
+                  %select#search-type(name='search-type')
+                    %option(value='Class' selected) Class
+                    %option(value='Facility' selected) Facility
+                    %option(value='User' selected) User
+                    %option(value='Equipment' selected) Equipment
+                    %option(value='Program' selected) Program
+                  %i
+              .responsive-box-xl.tag-box
+                %label.input
+                  %i.icon-append.glyphicon.glyphicon-search.search-icon
+                  %input#search-terms(type='text' name='search-terms' placeholder='What are you looking for?' list='list')
+                  %datalist#list
+                    %option(value='Soccer')
+                    %option(value='Swimming')
+                    %option(value='Lacrosse')
+                    %option(value='Baking')
+                    %option(value='Dance')
+                    %option(value='French Lessons')
+                    %option(value='Pools')
+                    %option(value='Badminton')
+                    %option(value='Yoga')
+                    %option(value='Computer Classes')
+                    %option(value='Chess')
+                    %option(value='Music Basics')
+                    %option(value='Gardening')
+                    %option(value='Bicycling')
+                    %option(value='Martial Arts')
+                    %option(value='Painting')
+              .responsive-box-xl.tag-box
+                .row
+                  .col-xs-12
+                    .form-group
+                      %input.form-control.tagsinput(value='Beginner,' data-role='tagsinput' style='display: none;')
+
+  .row.hidden-search-bits
+    .col-xs-12
+      .smart-form
+        %fieldset#search-filters
+          .row
+            .col-sm-1.col-xs-12
+              .responsive-box-sm
+                %p Refine by:
+            .col-sm-11.col-xs-12
+              .responsive-box-md(style='margin-right: 25px;')
+                %label
+                  %select(name='filter-facility' onchange='filterResults()')
+                    %option(value='' selected) Location
+                    %option(value='Tesla Building') Tesla Building
+                    %option(value='Emerson Memorial') Emerson Memorial
+                    %option(value='Sports Complex') Sports Complex
+                    %option(value='South Science Building') South Science Building
+                    %option(value='West Secondary School') West Secondary School
+                  %i
+              .responsive-box-md
+                %label
+                  %select(name='filter-category' onchange='filterResults()')
+                    %option(value='' selected) Program Category
+                    %option(value='Soccer') Soccer
+                    %option(value='Swimming') Swimming
+                    %option(value='Lacrosse') Lacrosse
+                    %option(value='Baking') Baking
+                    %option(value='Dance') Dance
+                    %option(value='French Lessons') French Lessons
+                    %option(value='Pools') Pools
+                    %option(value='Badminton') Badminton
+                    %option(value='Writing Workshops') Writing Workshops
+                    %option(value='Computer Classes') Computer Classes
+                  %i
+              .responsive-box-md
+                .input-group
+                  %input.form-control.datepicker(type='text' name='mydate' placeholder='Starts after' data-dateformat='dd/mm/yy')
+                  %span.input-group-addon
+                    %i.fa.fa-calendar
+              .responsive-box-sm
+                %label
+                  %select(name='filter-age' onchange='filterResults()')
+                    %option(value='' selected) Age
+                    %option(value='5-8') 5-8
+                    %option(value='9-12') 9-12
+                    %option(value='13-15') 13-15
+                    %option(value='16-18') 16-18
+                    %option(value='19-25') 19-25
+                    %option(value='25-40') 25-40
+                    %option(value='40-60') 40-60
+                    %option(value='60+') 60+
+                %i
+              .responsive-box-md
+                %label
+                  %select(name='filter-available-slots' onchange='filterResults()')
+                    %option(value='' selected) Available Slots
+                    %option(value='1') 1+
+                    %option(value='2') 2+
+                    %option(value='3') 3+
+                    %option(value='4') 4+
+                    %option(value='5') 5+
+                    %option(value='10') 10+
+                    %option(value='20') 20+
+                  %i
+              .responsive-box-md
+              %label
+                %select(name='filter-instructor' onchange='filterResults()')
+                  %option(value='' selected)
+                  %option(value='23455') Mike Jones
+                  %option(value='12345') Abby Wenslydale
+                  %option(value='234567') Ed Havarti
+                  %option(value='345678') Jane Gruyere

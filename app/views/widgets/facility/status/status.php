@@ -1,0 +1,62 @@
+<header>
+  <?php render_partial('edit_button', array('title' => 'facility-status')); ?>
+  <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
+  <h2> Status </h2>
+</header>
+<!-- widget div-->
+<div>
+  <div class="widget-body widget-hide-overflow no-padding">
+    <!-- content goes here -->
+      <div class="widget-body no-padding">
+        <div class="panel-body well">
+          <form action="" id="facility-status-form" class="smart-form" novalidate="novalidate">
+            <fieldset id="facility-status">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label class="label">Current Status</label>
+                  <div class="inline-group">
+                    <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here ">
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkbox-active" checked="checked">
+                        <i></i>Active
+                      </label>
+                    </div>
+                    <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here " style="width:140px;">
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkbox-published-online">
+                        <i></i>Published Online
+                      </label>
+                    </div>
+                    <div  class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here ">
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkbox-available">
+                        <i></i>Available
+                      </label>
+                    </div>
+                    <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here " style="width:165px;margin-right:-25px;">
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkbox-visible">
+                        <i></i>Visible in search
+                      </label>
+                    </div>
+                    <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here " style="width:115px;">
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkbox-rental-allowed">
+                        <i></i>Rental allowed
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Hidden Update Button Row -->
+              <?php render_partial('edit_row', array('title' => 'facility-status')); ?>
+              <!-- End Hidden Update Button Row -->
+            </fieldset>
+          </form>
+        </div>
+        <!-- end of panel-body -->
+      </div>
+    <!-- end content -->
+  </div>
+</div>
+<!-- end widget div -->

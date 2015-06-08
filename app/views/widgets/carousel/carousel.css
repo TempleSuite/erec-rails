@@ -1,0 +1,15 @@
+.carousel-delete {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  z-index: 9999;
+
+  display: inline-block;
+  text-align: center;
+}
+
+.carousel-delete i {
+  color: #fff;
+  font-size: 125%;
+}

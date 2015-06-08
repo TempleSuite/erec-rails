@@ -1,0 +1,91 @@
+<header>
+  <?php render_partial('edit_button', array('title' => 'social-media')); ?>
+  <span class="widget-icon"> <i class="fa fa-heart txt-color-white"></i> </span>
+  <h2> Social Media </h2>
+</header>
+
+<!-- widget div-->
+<div>
+  <div class="widget-body widget-hide-overflow no-padding">
+    <!-- content goes here -->
+    <div class="widget-body no-padding">
+      <div class="panel-body well">
+        <form action="" id="social-media-form" class="smart-form" novalidate="novalidate">
+          <fieldset>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-xl social-icons">
+                  <div class="responsive-box-sm">
+                    <a href="http://www.facebook.com/MAISeSoftware" target="_blank" ><i class="fa fa-facebook-square fa-3x"></i></a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- expandable area for managing social media -->
+            <div class='row hidden-button hidden'  data-row='social-media'>
+              <hr/>
+              <div class="responsive-box-lg ">
+                  <h4>Manage your social media</h4>
+                </div>
+              <div class="social-media-list">
+
+                <div class="inline-group">
+                  <label>
+                    <input type="checkbox" name="checkbox" checked="checked" >
+                    <span><a href="#" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></span>
+                  </label>
+                  <label class="input">
+                    <input id="facebook" type="text" placeholder="http://" />
+                  </label>
+                </div>
+
+                <div class="inline-group">
+                  <label>
+                    <input type="checkbox" name="checkbox" >
+                    <span><a href="#" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></span>
+                  </label>
+                  <label class="input">
+                    <input id="twitter" type="text" placeholder="http://" />
+                  </label>
+                </div>
+
+                <div class="inline-group">
+                  <label>
+                    <input type="checkbox" name="checkbox" >
+                    <span><a href="#" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></span>
+                  </label>
+                  <label class="input">
+                    <input id="linkedin" type="text" placeholder="http://" />
+                  </label>
+                </div>
+
+                <div class="inline-group">
+                  <label>
+                    <input type="checkbox" name="checkbox" >
+                    <span><a href="#" target="_blank"><i class="fa fa-google-plus-square fa-3x"></i></a></span>
+                  </label>
+                  <label class="input">
+                    <input id="google" type="text" placeholder="http://" />
+                  </label>
+                </div>
+
+              </div>
+              <div class="col-sm-4 col-xs-12 pull-right">
+                <footer>
+                  <button type='submit' class='btn btn-primary btn-sm manage-social' data-update='social-media'>Update</button>
+                </footer>
+              </div>
+            </div>
+
+            <!-- End Hidden Update Button Row -->
+          </fieldset>
+        </form>
+        <!-- end of panel-body -->
+      </div>
+      <!-- end of panel-body -->
+    </div>
+    <!-- end content -->
+  </div>
+</div>

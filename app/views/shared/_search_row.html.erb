@@ -1,0 +1,118 @@
+<%
+  ###
+   # Single Search Result
+   #
+   # @param 'names'    Multiple titles for the result.
+   # @param 'type'     Type of the result: `user`, `facility`, `class`
+   # @param 'cost'     Cost of the result. `facility` and `class` only.
+   # @param 'rating'   Rating of the result.
+   # @param 'capacity' Capacity of the result.
+   #
+   # @author Katelyn Sievert <katelyn.sievert@gmail.com>
+   # @author Adrian Estergaard <theturtlemoves@gmail.com>
+  ###
+
+  requirements ||= nil
+  image ||= image_url('superbox/superbox-thumb-18.jpg')
+%>
+
+<!-- search result row -->
+<div class='row'>
+  <div class='col-xs-12 well'>
+    <div class='row'>
+      <div class='col-md-6 col-xs-12'>
+        <div class='responsive-box-xl'>
+          <a href='#'><%= names.join(' > ') %></a>
+        </div>
+      </div>
+
+      <div class='col-md-6 col-xs-12'>
+        <div class='responsive-box-md lean-right'>
+          <%= case (type)
+              when 'class' "<strong>Cost:</strong> $#{cost}"
+              when 'facility' "<strong>Cost:</strong> From $#{cost}"
+              when 'equipment' "<strong>Fee:</strong> $#{cost}"
+              when 'user' '<input type="checkbox" name="checkbox" checked="checked"><i></i>Select'
+              end %>
+        </div>
+
+        <div class='responsive-box-md rating-box lean-right smart-form'>
+          <%= if ['class', 'equipment', 'facility', 'user'].include?(type)
+                render partial: 'shared/rating', locals: { rating: rating || 3.0 }
+              end %>
+        </div>
+      </div>
+    </div>
+
+    <div class='row search-result'>
+      <div class='col-xs-12'>
+        <div class='responsive-box-xl'>
+          <% if type == "class" %>
+            <a href='/class.php'><img src='<%= image %>' alt='profile icon' class='icon-sm'></a>
+            <p><strong>Runs:</strong> <%= date %></p>
+            <p><strong>At:</strong> <%= locations.length == 1 ? locations[0] : 'Multiple Locations' %></p>
+            <p><strong>By:</strong> <%= locations.length == 1 ? locations[0] : 'Multiple Locations' %></p>
+            <p><strong>Status:</strong> Available</p>
+            <% if defined?(requirements) %>
+              <p><strong>Pre-requisites:</strong> <a href="#"><% requirements %></a></p>
+            <% end %>
+          <% elsif type == "facility" %>
+            <a href='/facility.php'><img src='<%= image %>' alt='profile icon' class='icon-sm'></a>
+            <p><strong>Open:</strong> Mon-Sat 9:00am to 6:00pm; Sun 12:00pm-5:30pm</p>
+            <p><strong>Capacity:</strong> <%= capacity %></p>
+            <p><strong>Status:</strong> Available</p>
+          <% elsif type == "user" %>
+            <a href='/profile.php'><img src='<%= image %>' alt='profile icon' class='icon-sm'></a>
+            <p><strong>Membership ID:</strong> <%= id %></p>
+            <p><strong>Roles:</strong> <%= roles.join(', ') %></p>
+          <% elsif type == "equipment" %>
+            <a href='/equipment.php'><img src='<%= image %>' alt='equipment icon' class='icon-sm'></a>
+            <p><strong>Tags:</strong> <%= keywords %></p>
+            <p><strong>Cost:</strong> $<%= cost %></p>
+          <% elsif type == "program" %>
+            <p><strong>Tags:</strong> <%= keywords %></p>
+          <% end %>
+        </div>
+
+        <div class='responsive-box-md pull-right'>
+          <% if type == "class" %>
+            <div class="row">
+              <% if state == 'wishlist' %>
+                <div class="col-xs-4 col-sm-12"><button type='submit' class='btn btn-primary btn-sm'>Remove</button></div>
+              <% else %>
+                <div class="col-xs-4 col-sm-12"><button type='submit' class='btn btn-primary btn-sm'>Wishlist</button></div>
+              <% end %>
+              <div class="col-xs-4 col-xs-offset-4 col-sm-12 col-sm-offset-0">
+                <a href="/make-payment.php">
+                  <% if type == 'class' %>
+                    <% if capacity > 10 %>
+                      <span class="badge bg-color-greenLight pull-right inbox-badge" style="position: absolute; top: 2px; right: 2px;"><%= capacity %></span>
+                    <% elsif capacity > 5 %>
+                      <span class="badge bg-color-orange pull-right inbox-badge" style="position: absolute; top: 2px; right: 2px;"><%= capacity %></span>
+                    <% elsif capacity > 0 %>
+                      <span class="badge bg-color-red pull-right inbox-badge" style="position: absolute; top: 2px; right: 2px;"><%= capacity %></span>
+                    <% end %>
+                  <% end %>
+
+                  <button class='btn btn-primary btn-sm'>Register</button>
+                </a>
+              </div>
+            </div>
+          <% elsif type == "facility" %>
+            <button type='submit' class='btn btn-primary btn-sm'>Rent</button>
+          <% elsif type == "user" %>
+
+          <% elsif type == "equipment" %>
+            <button type='submit' class='btn btn-primary btn-sm'>Buy</button>
+
+          <% elsif type == "program" %>
+            <button type='submit' class='btn btn-primary btn-sm'>Details</button>
+
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End search result row -->

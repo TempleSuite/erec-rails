@@ -1,0 +1,459 @@
+<header>
+  <?php render_partial('edit_button', array('title' => 'gl-mappings')); ?>
+  <span class="widget-icon"> <i class="fa fa-image txt-color-white"></i> </span>
+  <h2> GL Mappings </h2>
+</header>
+
+<!-- widget div-->
+<div role="content">
+  <div class="widget-body widget-hide-overflow no-padding">
+    <!-- content goes here -->
+    <div class="widget-body no-padding">
+      <div class="panel-body well">
+        <form action="" id="gl-mapping-form" class="smart-form" novalidate="novalidate">
+          <fieldset>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-xl" style="min-width: 100%;">
+                  <label>Required Mappings</label>
+                  <div class="responsive-box-xl well" style="min-width: 90%; display: block;">
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Billing (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Billing (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Billing Adjustment (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Billing Adjustment (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Billing Payment (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Billing Payment (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Billing Payment Adjustment (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Billing Payment Adjustment (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Discount (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Discount (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Discount Adjustment (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Discount Adjustment (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-xl" style="min-width: 100%;">
+                  <div class="responsive-box-xl well" style="min-width: 90%; display: block;">
+                    <div class="row">
+                      <div class="responsive-box-xl">
+                        <div class="inline-group">
+                          <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" style="padding-left: 20px;">
+                            <label class="checkbox">
+                              <input type="checkbox" name="checkbox-taxation-1">
+                              <i></i> Include
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Taxation 1 (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Taxation 1 (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class=" widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-xl" style="min-width: 100%;">
+                  <div class="responsive-box-xl well" style="min-width: 90%; display: block;">
+                    <div class="row">
+                      <div class="responsive-box-xl">
+                        <div class="inline-group">
+                          <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" style="padding-left: 20px;">
+                            <label class="checkbox">
+                              <input type="checkbox" name="checkbox-taxation-2">
+                              <i></i> Include
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Taxation 2 (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Taxation 2 (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-xl" style="min-width: 100%;">
+                  <div class="responsive-box-xl well" style="min-width: 90%; display: block;">
+                    <div class="row">
+                      <div class="responsive-box-xl">
+                        <div class="inline-group">
+                          <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" style="padding-left: 20px;">
+                            <label class="checkbox">
+                              <input type="checkbox" name="checkbox-taxation-3">
+                              <i></i> Include
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Taxation 3 (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Taxation 3 (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-xl" style="min-width: 100%;">
+                  <div class="responsive-box-xl well" style="min-width: 90%; display: block;">
+                    <div class="row">
+                      <div class="responsive-box-xl">
+                        <div class="inline-group">
+                          <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" style="padding-left: 20px;">
+                            <label class="checkbox">
+                              <input type="checkbox" name="checkbox-taxation-1">
+                              <i></i> Include
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Other (Credit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="padding-left: 20px;">
+                      <div class="col-xs-12">
+                        <div class="responsive-box-xl">
+                          Other (Debit Account)
+                        </div>
+                        <div class="responsive-box-md lean-right">
+                          <label class="widget lean-right">
+                            <select name="widget-list" id="widget-list">
+                              <option>Select GL Account</option>
+                              <option value="1258746">1258746</option>
+                              <option value="8335479">8335479</option>
+                              <option value="3314748">3314748</option>
+                            </select> <i></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hidden Update Button Row -->
+            <?php render_partial('edit_row', array('title' => 'gl-mappings')); ?>
+            <!-- End Hidden Update Button Row -->
+          </fieldset>
+        </form>
+      </div>
+      <!-- end of panel-body -->
+    </div>
+    <!-- end content -->
+  </div>
+</div>

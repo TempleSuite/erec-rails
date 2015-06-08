@@ -1,0 +1,104 @@
+<header>
+  <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
+  <h2> Wishlist </h2>
+</header>
+
+<div>
+  <div class="widget-body widget-hide-overflow no-padding">
+    <!-- content goes here -->
+    <div class="widget-body no-padding">
+      <div class="panel-body well">
+        <%= render partial: 'shared/search_row', locals: {
+                   names: ['Yoga Flow','Level 1'],
+                   type: 'class',
+                   image: image_url('superbox/yoga-class.jpg'),
+                   cost: '210',
+                   rating: 4.3,
+                   date: 'May 13, 7:00pm-8:30pm, 6 sessions',
+                   locations: ['Greg Moore Centre, room 200'],
+                   instructors: ['Gary Middleton'],
+                   capacity: 11,
+                   keywords: 'yoga indoor beginner',
+                   state: 'wishlist' } %>
+        <%= render partial: 'shared/search_row', locals: {
+                   names: ['Junior Tennis Program'],
+                   type: 'class',
+                   cost: '90',
+                   rating: 2.8,
+                   date: 'May 23, 7:00pm-8:30pm, 6 sessions',
+                   locations: ['Sports Complex'],
+                   instructors: ['Audrey Johnson'],
+                   capacity: 12,
+                   keywords: 'tennis beginner youth outdoors',
+                   state: 'wishlist' } %>
+        <%= render partial: 'shared/search_row', locals: {
+                   names: ['Kid\'s Dance'],
+                   type: 'class',
+                   cost: '270',
+                   rating: 3.8,
+                   date: 'May 28, 3:00pm-4:30pm, 6 sessions',
+                   locations: ['Greg Moore Centre, room 200', 'Centre for Arts'],
+                   instructors: ['Steve Smith'],
+                   capacity: 18,
+                   keywords: 'youth kids dance',
+                   state: 'wishlist' } %>
+        <%= render partial: 'shared/search_row', locals: {
+                   names: ['Mountain Biking'],
+                   type: 'class',
+                   cost: '210',
+                   rating: 4.0,
+                   date: 'May 15, 10:00am-2:30pm, 6 sessions',
+                   locations: ['Trout Lake Parking Lot B'],
+                   instructors: ['Sahra Dilmaghanyan'],
+                   capacity: 12,
+                   keywords: 'bicycling biking outdoors',
+                   state: 'wishlist' } %>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="responsive-box-lg lean-right billing-amount">
+              <div class="row subtotal">
+                <div class="col-xs-12">
+                  <div class="responsive-box-sm"style="text-align: right;">
+                    <strong>Subtotal:</strong>
+                  </div>
+                  <div class="responsive-box-sm lean-right" style="text-align: right; padding-right: 5px;">
+                    $780.00
+                  </div>
+                </div>
+              </div>
+              <div class="row taxes">
+                <div class="col-xs-12">
+                  <div class="responsive-box-sm"style="text-align: right;">
+                    <strong>Taxes:</strong>
+                  </div>
+                  <div class="responsive-box-sm lean-right" style="text-align: right; padding-right: 5px;">
+                    $93.60
+                  </div>
+                </div>
+              </div>
+              <div class="row total">
+                <div class="col-xs-12">
+                  <div class="responsive-box-sm"style="text-align: right;">
+                    <strong>Total:</strong>
+                  </div>
+                  <div class="responsive-box-sm lean-right" style="text-align: right; padding-right: 5px;">
+                    $873.60
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+            <footer>
+                <div class='col-xs-12'>
+                    <button type='submit' class='btn btn-primary btn-sm'>Register All</button>
+                </div>
+            </footer>
+        </div>
+      </div>
+      <!-- end of panel-body -->
+    </div>
+    <!-- end content -->
+  </div>
+</div>

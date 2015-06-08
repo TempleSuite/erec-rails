@@ -1,0 +1,19 @@
+!!!
+= render partial: 'header'
+= render partial: 'nav'
+
+/ MAIN PANEL
+#main(role="main")
+  = render partial: 'ribbon'
+
+  / MAIN CONTENT
+  #content
+    = yield
+  / END MAIN CONTENT
+/ END MAIN PANEL
+
+/ FOOTER
+= render partial: 'footer'
+
+= render partial: 'scripts'
+= render partial: 'google_analytics'
