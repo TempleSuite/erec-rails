@@ -71,4 +71,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular'
   gem 'rails-assets-font-awesome'
   gem 'rails-assets-spectrum'
+  gem 'rails-assets-dropzone'
 end
