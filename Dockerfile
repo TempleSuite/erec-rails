@@ -5,5 +5,7 @@ ENV GEM_HOME /bundle/ruby-2.2.1
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
 RUN mkdir /code /bundle
 
+RUN gem install bundler
+
 WORKDIR /code
 ADD . /code
