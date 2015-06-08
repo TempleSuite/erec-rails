@@ -184,6 +184,7 @@ GEM
     rails-assets-angular (1.4.0)
     rails-assets-bootstrap-sass-official (3.3.4)
       rails-assets-jquery (>= 1.9.0)
+    rails-assets-dropzone (4.0.1)
     rails-assets-font-awesome (4.3.0)
     rails-assets-jquery (2.1.4)
     rails-assets-spectrum (1.7.0)
@@ -319,6 +320,7 @@ DEPENDENCIES
   rails (= 4.2.1)
   rails-assets-angular!
   rails-assets-bootstrap-sass-official!
+  rails-assets-dropzone!
   rails-assets-font-awesome!
   rails-assets-spectrum!
   rails_12factor
