@@ -1,5 +1,5 @@
 <header>
-  <?php render_partial('edit_button', array('title' => 'personal-information')); ?>
+  <%= render partial: 'shared/edit_button', locals: { title: 'personal-information' } %>
   <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
   <h2> Personal Information </h2>
 </header>
@@ -89,7 +89,7 @@
                       <option value="NT">Northwest Territories</option>
                       <option value="NU">Nunavut</option>
                       <option value="YT">Yukon</option>
-                    </select>				
+                    </select>
                   </label>
                 </div>
               </div>
@@ -311,7 +311,7 @@
               </div>
             </div>
             <!-- Hidden Update Button Row -->
-            <?php render_partial('edit_row', array('title' => 'personal-information')); ?>
+            <%= render partial: 'shared/edit_row', locals: { title: 'personal-information' } %>
             <!-- End Hidden Update Button Row -->
           </fieldset>
           <!-- end personal information fields -->
