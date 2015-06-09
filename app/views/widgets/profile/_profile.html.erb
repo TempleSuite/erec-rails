@@ -1,5 +1,5 @@
 <header>
-  <?php render_partial('edit_button', array('title' => 'profile-header')); ?>
+  <%= render partial: 'shared/edit_button', locals: { title: 'profile-header' } %>
   <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
   <h2> Profile </h2>
 </header>
@@ -25,20 +25,18 @@
                     <a href="#" data-expands="#profile-change-password">Change Password</a>
                   </label>
 
-                  <?php $this->partial('edit_image'); ?>
+                  <%= render partial: 'widgets/profile/profile/edit_image' %>
 
-                  <?php $this->partial('change_password'); ?>
+                  <%= render partial: 'widgets/profile/profile/change_password' %>
 
                   <br />
 
-                  <?php render_partial(
-                    'rating',
-                    array('rating' => isset($locals['rating']) ? $locals['rating'] : '3.0')
-                  ); ?>
+                  <%= render partial: 'shared/rating',
+                    locals: { rating: defined?(rating) ? rating : 3.0 } %>
 
                   <a href="#" data-expands="#profile-enter-comments">Enter Comments</a>
 
-                  <?php $this->partial('enter_comments'); ?>
+                  <%= render partial: ('widgets/profile/profile/enter_comments'); %>
                 </div>
                 <div class="responsive-box-xl lean-right" style="max-width: 400px;">
                   <label class="textarea">
@@ -54,7 +52,7 @@
               </div>
             </div>
 
-            <?php render_partial('edit_row', array('title' => 'profile-header')); ?>
+            <%= render partial: 'shared/edit_row', locals: { title: 'profile-header' } %>
           </fieldset>
         </form>
       </div>
