@@ -1,5 +1,5 @@
 <header>
-  <?php render_partial('edit_button', array('title' => 'social-media')); ?>
+  <%= render partial: 'shared/edit_button', title: 'social-media' %>
   <span class="widget-icon"> <i class="fa fa-heart txt-color-white"></i> </span>
   <h2> Social Media </h2>
 </header>
@@ -19,12 +19,11 @@
                     <a href="http://www.facebook.com/MAISeSoftware" target="_blank" ><i class="fa fa-facebook-square fa-3x"></i></a>
                   </div>
                 </div>
-
               </div>
             </div>
 
             <!-- expandable area for managing social media -->
-            <div class='row hidden-button hidden'  data-row='social-media'>
+            <div class='row hidden-button hidden' data-row='social-media'>
               <hr/>
               <div class="responsive-box-lg ">
                   <h4>Manage your social media</h4>

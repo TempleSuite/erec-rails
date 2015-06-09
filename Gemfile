@@ -63,6 +63,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem 'bullet'
 end
 
 source 'https://rails-assets.org' do

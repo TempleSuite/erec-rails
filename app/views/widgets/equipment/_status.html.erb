@@ -1,0 +1,74 @@
+<header>
+  <%= render partial: 'shared/edit_button', locals: { title: 'equipment-status' } %>
+  <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
+  <h2> Status</h2>
+</header>
+
+<!-- widget div-->
+<div role="content">
+  <div class="widget-body widget-hide-overflow no-padding">
+    <!-- content goes here -->
+    <div class="widget-body no-padding">
+      <div class="panel-body well">
+        <form action="" id="equipment-status-form" class="smart-form" novalidate="novalidate">
+          <fieldset>
+            <div class="row">
+              <div class="col-xs-12">
+                <label class="label">Current Status</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here ">
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkbox-active" checked="checked">
+                    <i></i>Active
+                  </label>
+                </div>
+                <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here ">
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkbox-online">
+                    <i></i>Published
+                  </label>
+                </div>
+                <div  class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here ">
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkbox-available">
+                    <i></i>Available
+                  </label>
+                </div>
+                <div class="responsive-box-sm" data-toggle="tooltip" data-placement="left" title="Some description here ">
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkbox-online">
+                    <i></i>Searchable
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="inline-group">
+                  <label class="radio state-disabled">
+                    <input type="radio" name="radio-inline" checked="checked">
+                    <i></i>For Sale </label>
+                  <label class="radio state-disabled">
+                    <input type="radio" name="radio-inline" >
+                    <i></i>For Rent </label>
+                </div>
+              </div>
+            </div>
+            <!-- Hidden Update Button Row -->
+            <%= render partial: 'shared/edit_row', locals: { title: 'equipment-status' } %>
+            <!-- End Hidden Update Button Row -->
+          </fieldset>
+        </form>
+      </div>
+      <!-- end of panel-body -->
+    </div>
+    <!-- end content -->
+  </div>
+  <!-- end widget-body -->
+</div>
+<!-- end widget div -->

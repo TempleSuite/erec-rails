@@ -1,5 +1,5 @@
 <header>
-  <?php render_partial('edit_button', array('title' => 'gl-mappings')); ?>
+  <%= render partial: 'shared/edit_button', locals: { title: 'gl-mappings' } %>
   <span class="widget-icon"> <i class="fa fa-image txt-color-white"></i> </span>
   <h2> GL Mappings </h2>
 </header>
@@ -447,7 +447,7 @@
             </div>
 
             <!-- Hidden Update Button Row -->
-            <?php render_partial('edit_row', array('title' => 'gl-mappings')); ?>
+            <%= render partial: 'shared/edit_row', locals: { title: 'gl-mappings' } %>
             <!-- End Hidden Update Button Row -->
           </fieldset>
         </form>

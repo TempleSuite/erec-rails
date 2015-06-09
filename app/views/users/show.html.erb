@@ -1,2 +1,78 @@
-<%= @user.first_name %>
-<%= @user.last_name %>
+<section id="widget-grid">
+  <div class="row">
+    <article class="col-sm-12 col-md-12 col-lg-8">
+      <%= render_widget 'profile/profile' %>
+      <%= render_widget 'profile/personal_information' %>
+      <%= render_widget 'profile/emergency_contact' %>
+
+      <!-- render Collectives widget -->
+      <%= render partial: 'shared/widget_associations',
+        'title'        => 'Collectives',
+        'id'           => 'wid-id-profile-collectives',
+        'badge-qty'    => '2',
+        'type'         => 'collective',
+        'edit_id'      => 'profile-collectives',
+        'associations' => [
+          {
+            'url'   => '/img/superbox/soccer-team.jpg',
+            'title' => 'Maple Soccer Team'
+          }, {
+            'url'   => '/img/superbox/seniors-swimming-club.jpg',
+            'title' => 'Seniors Swimming Club'
+          }
+        ] %>
+      <!-- end render Collectives widget -->
+
+      <!-- render Friends widget -->
+      <%= render partial: 'shared/widget_associations',
+        'title'        => 'Friends',
+        'id'           => 'wid-id-profile-friends',
+        'badge-qty'    => '2',
+        'type'         => 'friend',
+        'edit_id'      => 'profile-friends',
+        'associations' => [
+          {
+            'url'   => '/img/avatars/6.jpg',
+            'title' => 'Jane Doe'
+          }, {
+            'url'   => '/img/avatars/7.jpg',
+            'title' => 'Kate Doe'
+          }
+        ] %>
+      <!-- end render Friends widget -->
+
+      <!-- render Dependents widget -->
+      <%= render partial: 'shared/widget_associations',
+        'title'        => 'Dependents',
+        'id'           => 'wid-id-profile-dependents',
+        'badge-qty'    => '3',
+        'type'         => 'dependent',
+        'edit_id'      => 'profile-dependents',
+        'associations' => [
+          {
+            'url'   => '/img/avatars/2.png',
+            'title' => 'Jane Peter'
+          }, {
+            'url'   => '/img/avatars/5.png',
+            'title' => 'Anne Doe'
+          }, {
+            'url'   => '/img/avatars/female.png',
+            'title' => 'Nina Ames'
+          }
+        ] %>
+      <!-- end render Dependents widget -->
+
+      <%= render_widget 'profile/billing_details' %>
+      <%= render_widget 'document_centre' %>
+      <%= render_widget 'calendar' %>
+    </article>
+
+    <article class="col-sm-12 col-md-12 col-lg-4">
+      <%= render_widget 'social_media' %>
+      <%= render_widget 'carousel' %>
+      <%= render_widget 'profile/notification_preferences' %>
+      <%= render_widget 'discount_codes' %>
+      <%= render_widget 'access_codes' %>
+    </article>
+  </div>
+</section>

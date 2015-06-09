@@ -1,19 +1,21 @@
 !!!
 = render partial: 'header'
-= render partial: 'nav'
 
-/ MAIN PANEL
-#main(role="main")
-  = render partial: 'ribbon'
+%body.menu-on-top.desktop-detected.container.mobile-view-activated
+  = render partial: 'nav'
 
-  / MAIN CONTENT
-  #content
-    = yield
-  / END MAIN CONTENT
-/ END MAIN PANEL
+  / MAIN PANEL
+  #main(role="main")
+    = render partial: 'ribbon'
 
-/ FOOTER
-= render partial: 'footer'
+    / MAIN CONTENT
+    #content
+      = yield
+    / END MAIN CONTENT
+  / END MAIN PANEL
 
-= render partial: 'scripts'
-= render partial: 'google_analytics'
+  / FOOTER
+  = render partial: 'footer'
+
+  = render partial: 'scripts'
+  = render partial: 'google_analytics'
