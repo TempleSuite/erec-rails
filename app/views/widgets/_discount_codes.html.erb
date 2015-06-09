@@ -1,5 +1,5 @@
 <header>
-  <?php render_partial('edit_button', array('title' => 'discount-codes')); ?>
+  <%= render partial: 'shared/edit_button', locals: { title: 'discount-codes' } %>
   <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
   <h2> Promo &amp; Discount Codes </h2>
 </header>
@@ -20,7 +20,7 @@
               </div>
             </div>
             <!-- Hidden Update Button Row -->
-            <?php render_partial('edit_row', array('title' => 'discount-codes', 'button-text' => 'Add Code')); ?>
+            <%= render partial: 'shared/edit_row', locals: { title: 'discount-codes', button_text: 'Add Code' } %>
             <!-- End Hidden Update Button Row -->
           </fieldset>
         </form>

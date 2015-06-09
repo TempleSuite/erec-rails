@@ -1,5 +1,5 @@
 <header>
-  <?php render_partial('edit_button', array('title' => 'notification-preferences')); ?>
+  <%= render partial: 'shared/edit_button', locals: { title: 'notification-preferences' } %>
   <span class="widget-icon"> <i class="fa fa-image txt-color-white"></i> </span>
   <h2> Notification Preferences </h2>
 </header>
@@ -36,7 +36,7 @@
             </div>
 
             <!-- Hidden Update Button Row -->
-            <?php render_partial('edit_row', array('title' => 'notification-preferences')); ?>
+            <%= render partial: 'shared/edit_row', locals: { title: 'notification-preferences' } %>
             <!-- End Hidden Update Button Row -->
           </fieldset>
         </form>
