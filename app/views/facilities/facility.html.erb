@@ -1,0 +1,42 @@
+<section id="widget-grid">
+  <div class="row">
+    <article class="col-sm-12 col-md-12 col-lg-8">
+      <%= render partial: 'facility/details' %>
+      <%= render partial: 'facility/information' %>
+      <%= render partial: 'facility/subfacilities' %>
+      <%= render partial: 'widgets/map' %>
+      <%= render partial: 'widgets/calendar' %>
+      <%= render partial: 'widgets/document_centre' %>
+
+      <!-- render Equipment widget -->
+       <%= render partial:'widget_associations', locals: {
+        'title'        => 'Equipment Inventory',
+        'id'           => 'wid-id-facility-equipment',
+        'badge-qty'    => '2',
+        'type'         => 'equipment',
+        'edit_id'      => 'facility-equipment',
+        'associations' => [
+          {
+            url: '/img/superbox/swimming-tubes.jpg',
+            title: 'Swimming Tubes (20)'
+          }, {
+            url: '/img/superbox/life-jacket.jpg',
+            title: 'Life Jacket (45)'
+          }
+        ]
+      } %>
+      <!-- end render Equipment widget -->
+
+      <%= render partial: 'shared/gl_mapping' %>
+    </article>
+
+    <article class="col-sm-12 col-md-12 col-lg-4">
+      <%= render partial: 'social_media' %>
+      <%= render partial: 'carousel' %>
+      <%= render partial: 'supervisor' %>
+      <%= render partial: 'discount_codes' %>
+      <%= render partial: 'access_codes' %>
+    </article>
+  </div>
+</section>
+

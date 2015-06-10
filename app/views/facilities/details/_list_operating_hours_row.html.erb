@@ -1,0 +1,48 @@
+<%
+  ###
+   # Print out a schedule row
+   #
+   # @param 'type'  string identifier for the type of row to print out
+   # @param 'row'   string identifier for the type of row to print out
+   # @return null
+   #
+   # @author Adrian Estergaard <theturtlemoves@gmail.com>
+  ###
+
+%>
+
+<div class='row well'>
+  <div class='col-xs-12 top-10'>
+    <div class='row'>
+      <div class='col-xs-1'>
+        <div class='inline-group '>
+          <label class='checkbox'>
+            <input type='checkbox' name='checkbox-active' checked='checked'>
+            <i></i>
+          </label>
+        </div> <!-- end inline group -->
+      </div>
+      <div class='col-xs-2'>
+        <span><%= Date::DAYNAMES[row_index] %></span>
+      </div>
+      <div class='col-xs-2'>
+        <label>
+          <select id='sessions-start-time' >
+            <% render partial: 'shared/list_hours' %>
+          </select> <i></i>
+        </label>
+      </div>
+      <div class='col-xs-1'>
+        <span>to:</span>
+      </div>
+      <div class='col-xs-2'>
+        <label>
+          <select id='sessions-end-time' >
+            <% render partial: 'shared/list_hours' %>
+          </select> <i></i>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+  

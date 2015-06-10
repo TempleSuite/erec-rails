@@ -1,5 +1,5 @@
 <header>
-  <?php render_partial('edit_button', array('title' => 'facility-information')); ?>
+  <%= render partial: 'shared/edit_button', locals: { title: 'facility-information' } %>
   <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
   <h2> Information </h2>
 </header>
@@ -140,7 +140,7 @@
             </div>
             <br/>
             <!-- Hidden Update Button Row -->
-            <?php render_partial('edit_row', array('title' => 'facility-information')); ?>
+            <%= render partial: 'shared/edit_row', locals: { title: 'facility-information' } %>
             <!-- End Hidden Update Button Row -->
 
           </fieldset>
