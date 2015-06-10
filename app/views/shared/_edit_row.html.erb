@@ -1,1 +1,21 @@
-derp
+<%
+###
+# The hidden row that is revealed when the edit button is clicked
+#
+# @param 'title'    title for the edit button to find when it triggers with.
+#
+# @author Adrian Estergaard <theturtlemoves@gmail.com>
+###
+
+button_text = 'Update' unless defined?(button_text)
+%>
+
+<div class='row hidden-button hidden' data-row='<%= title %>'>
+  <footer>
+    <div class='col-xs-12'>
+      <button type='submit' class='btn btn-primary btn-sm update-button' data-update='<%= title %>'>
+        <%= button_text %>
+      </button>
+    </div>
+  </footer>
+</div>
