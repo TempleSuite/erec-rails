@@ -1,0 +1,19 @@
+%h1 Listing admin_facilities
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_facilities.each do |admin_facility|
+      %tr
+        %td= link_to 'Show', admin_facility
+        %td= link_to 'Edit', edit_admin_facility_path(admin_facility)
+        %td= link_to 'Destroy', admin_facility, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Facility', new_admin_facility_path
