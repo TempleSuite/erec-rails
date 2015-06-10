@@ -37,64 +37,64 @@ RSpec.describe Admin::FacilitiesController, type: :controller do
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    it "assigns all admin_facilities as @admin_facilities" do
-      facility = Admin::Facility.create! valid_attributes
+    it "assigns all facilities as @facilities" do
+      facility = Facility.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:admin_facilities)).to eq([facility])
+      expect(assigns(:facilities)).to eq([facility])
     end
   end
 
   describe "GET #show" do
     it "assigns the requested admin_facility as @admin_facility" do
-      facility = Admin::Facility.create! valid_attributes
+      facility = Facility.create! valid_attributes
       get :show, {:id => facility.to_param}, valid_session
-      expect(assigns(:admin_facility)).to eq(facility)
+      expect(assigns(:facility)).to eq(facility)
     end
   end
 
   describe "GET #new" do
-    it "assigns a new admin_facility as @admin_facility" do
+    it "assigns a new facility as @facility" do
       get :new, {}, valid_session
-      expect(assigns(:admin_facility)).to be_a_new(Admin::Facility)
+      expect(assigns(:facility)).to be_a_new(Facility)
     end
   end
 
   describe "GET #edit" do
-    it "assigns the requested admin_facility as @admin_facility" do
-      facility = Admin::Facility.create! valid_attributes
+    it "assigns the requested facility as @facility" do
+      facility = Facility.create! valid_attributes
       get :edit, {:id => facility.to_param}, valid_session
-      expect(assigns(:admin_facility)).to eq(facility)
+      expect(assigns(:facility)).to eq(facility)
     end
   end
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Admin::Facility" do
+      it "creates a new Facility" do
         expect {
-          post :create, {:admin_facility => valid_attributes}, valid_session
-        }.to change(Admin::Facility, :count).by(1)
+          post :create, {:facility => valid_attributes}, valid_session
+        }.to change(Facility, :count).by(1)
       end
 
-      it "assigns a newly created admin_facility as @admin_facility" do
-        post :create, {:admin_facility => valid_attributes}, valid_session
-        expect(assigns(:admin_facility)).to be_a(Admin::Facility)
-        expect(assigns(:admin_facility)).to be_persisted
+      it "assigns a newly created facility as @facility" do
+        post :create, {:facility => valid_attributes}, valid_session
+        expect(assigns(:facility)).to be_a(Facility)
+        expect(assigns(:facility)).to be_persisted
       end
 
-      it "redirects to the created admin_facility" do
-        post :create, {:admin_facility => valid_attributes}, valid_session
-        expect(response).to redirect_to(Admin::Facility.last)
+      it "redirects to the created facility" do
+        post :create, {:facility => valid_attributes}, valid_session
+        expect(response).to redirect_to(Facility.last)
       end
     end
 
     context "with invalid params" do
-      it "assigns a newly created but unsaved admin_facility as @admin_facility" do
-        post :create, {:admin_facility => invalid_attributes}, valid_session
-        expect(assigns(:admin_facility)).to be_a_new(Admin::Facility)
+      it "assigns a newly created but unsaved facility as @facility" do
+        post :create, {:facility => invalid_attributes}, valid_session
+        expect(assigns(:facility)).to be_a_new(Facility)
       end
 
       it "re-renders the 'new' template" do
-        post :create, {:admin_facility => invalid_attributes}, valid_session
+        post :create, {:facility => invalid_attributes}, valid_session
         expect(response).to render_template("new")
       end
     end
@@ -106,51 +106,51 @@ RSpec.describe Admin::FacilitiesController, type: :controller do
         skip("Add a hash of attributes valid for your model")
       }
 
-      it "updates the requested admin_facility" do
-        facility = Admin::Facility.create! valid_attributes
-        put :update, {:id => facility.to_param, :admin_facility => new_attributes}, valid_session
+      it "updates the requested facility" do
+        facility = Facility.create! valid_attributes
+        put :update, {:id => facility.to_param, :facility => new_attributes}, valid_session
         facility.reload
         skip("Add assertions for updated state")
       end
 
-      it "assigns the requested admin_facility as @admin_facility" do
-        facility = Admin::Facility.create! valid_attributes
-        put :update, {:id => facility.to_param, :admin_facility => valid_attributes}, valid_session
-        expect(assigns(:admin_facility)).to eq(facility)
+      it "assigns the requested facility as @facility" do
+        facility = Facility.create! valid_attributes
+        put :update, {:id => facility.to_param, :facility => valid_attributes}, valid_session
+        expect(assigns(:facility)).to eq(facility)
       end
 
-      it "redirects to the admin_facility" do
-        facility = Admin::Facility.create! valid_attributes
-        put :update, {:id => facility.to_param, :admin_facility => valid_attributes}, valid_session
+      it "redirects to the facility" do
+        facility = Facility.create! valid_attributes
+        put :update, {:id => facility.to_param, :facility => valid_attributes}, valid_session
         expect(response).to redirect_to(facility)
       end
     end
 
     context "with invalid params" do
-      it "assigns the admin_facility as @admin_facility" do
-        facility = Admin::Facility.create! valid_attributes
-        put :update, {:id => facility.to_param, :admin_facility => invalid_attributes}, valid_session
-        expect(assigns(:admin_facility)).to eq(facility)
+      it "assigns the facility as @facility" do
+        facility = Facility.create! valid_attributes
+        put :update, {:id => facility.to_param, :facility => invalid_attributes}, valid_session
+        expect(assigns(:facility)).to eq(facility)
       end
 
       it "re-renders the 'edit' template" do
-        facility = Admin::Facility.create! valid_attributes
-        put :update, {:id => facility.to_param, :admin_facility => invalid_attributes}, valid_session
+        facility = Facility.create! valid_attributes
+        put :update, {:id => facility.to_param, :facility => invalid_attributes}, valid_session
         expect(response).to render_template("edit")
       end
     end
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested admin_facility" do
-      facility = Admin::Facility.create! valid_attributes
+    it "destroys the requested facility" do
+      facility = Facility.create! valid_attributes
       expect {
         delete :destroy, {:id => facility.to_param}, valid_session
-      }.to change(Admin::Facility, :count).by(-1)
+      }.to change(Facility, :count).by(-1)
     end
 
-    it "redirects to the admin_facilities list" do
-      facility = Admin::Facility.create! valid_attributes
+    it "redirects to the facilities list" do
+      facility = Facility.create! valid_attributes
       delete :destroy, {:id => facility.to_param}, valid_session
       expect(response).to redirect_to(admin_facilities_url)
     end
