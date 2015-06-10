@@ -4,24 +4,21 @@
  #
  # @param string 'id'      The zero-initial slide id to give this item.
  # @param string 'src'     The complete path to the image.
+ # @param string 'title'   The title to display and use as the image alt tag.
  # @param string 'caption' The caption to display.
  #
  # @author Katelyn Sievert <katelyn.sievert@gmail.com
+ # @modified by Adrian Estergaard <theturtlemoves@gmail.com
 ###
 
 activeClass = (defined?(active) && active) ? 'active' : '';
 
 %>
 
-<div class="item <%= activeClass %>"
-     data-slide-id="<%= id %>"
->
-  <%= image_tag src: src, alt: caption %>
+<div class='item <%= activeClass %>' data-slide-id='<%= id %>'>
+  <%= image_tag src: src, alt: title %>
   <div class="carousel-caption caption-right">
-    <h4>The bridge</h4>
-
-    <p>
-      <%= caption %>
-    </p>
+    <h4><%= title %></h4>
+    <p><%= caption %></p>
   </div>
 </div>
