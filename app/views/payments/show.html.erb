@@ -1,0 +1,24 @@
+<section id="widget-grid" class="">
+<!-- row -->
+  <div class="row">
+  <!-- article main-->
+    <article class="col-sm-12 col-md-12 col-lg-8">
+      <!-- Make a payment widget-->
+      <%= render_widget 'make_payment/details' %>
+      <!-- End Make a payment widget -->
+    </article>
+
+    <article class="col-sm-12 col-md-12 col-lg-4">
+      <!-- Promo & Discount Codes widget -->
+       <%= render_widget 'make_payment/discount_codes' %>
+      <!-- end Promo & Discount Codes  widget -->
+
+      <!--Access Codes widget -->
+      <%= render_widget 'make_payment/access_codes' %>
+      <!-- endAccess Codes widget widget -->
+    </article>
+  <!-- End of article main-->
+  </div>
+<!-- end row -->
+</section>
+<!-- end All widgets  -->

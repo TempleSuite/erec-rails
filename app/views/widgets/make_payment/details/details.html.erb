@@ -1,0 +1,98 @@
+<!--  Make a payment Header widget  -->
+<div class="jarviswidget jarviswidget-color-blueDark"
+  id="wid-id-payment-header"
+  data-widget-editbutton="false"
+  data-widget-fullscreenbutton="false"
+  data-widget-colorbutton="false">
+  <header>
+    <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
+    <h2>Make a payment</h2>
+  </header>
+  <div>
+    <!-- widget div-->
+    <div class="widget-body widget-hide-overflow no-padding">
+      <!-- content goes here -->
+      <div class="widget-body no-padding">
+        <div class="panel-body">
+          <form action="" class="smart-form" id="make-payment">
+            <fieldset>
+              <div class="well">
+                <div class="row">
+                  <div class="col col-xs-12 top-10">
+                    <div class="responsive-box-lg id-number">
+                      <label class="label"><strong>Now registering:</strong></label>
+                      <label class="label txt-color-red"> Yoga Flow 1 </label>
+                    </div>    
+                    
+                    <div class="responsive-box-lg" style="margin-left: 25px;">
+                      <label class="label">
+                        Who are you registering?
+                      </label>
+                      <select name="widget-list" id="widget-list">
+                        <option>Myself</option>
+                        <option>Jane Peter</option>
+                        <option>Anne Doe</option>
+                      </select>
+                    </div>
+                  </div>
+               
+                  <div class="responsive-box-lg pull-right id-number" >                  
+                    <div class="responsive-class-md pull-right">                    
+                         <label class="label">
+                          <strong>Cost:</strong> $35 x 6:
+                        </label><br/>
+                        <label class="label">
+                          $210.00
+                        </label>
+                        <br/>
+                      <label class="label">
+                        <strong>Tax:</strong>
+                      </label>
+                      <label class="label">
+                        $25.20
+                      </label>
+                    </div>
+                    <div class="responsive-class-sm pull-right">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="well">
+                <div class="row">
+                  <div class="col col-xs-12" style="">
+                    <div class="responsive-box-xl">
+                      <strong>Discount Coupon:</strong> <input type="text" name="coupon" id="coupon" placeholder="Enter Coupon Code">
+                    </div>
+                    <div class="responsive-class-sm pull-right id-number">
+                      <label class="label"><strong>Discount:</strong></label>
+                      <label class="label" >$0</label>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-xs-12 top-10">
+                  <div class="responsive-box-lg ">
+                    <label class="label">To use your payment method on file, click pay. To modify your payment method, click update. </label>
+                    <button type="submit" class="btn btn-primary btn-sm " style="float:left;" >Update Payment Method</button>
+                  </div>
+                  <div class="responsive-box-xs pull-right" style="margin-right: 30px;">
+                    <label class="label">
+                      <strong>Total: $235.20</strong>
+                    </label>
+                    <a href="#ajax/dashboard.php"><button id="buy-button" class="btn btn-primary btn-sm">Pay</button></a>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div><!-- end of panel-body -->
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- end widget div -->
+  </div>
+</div>
+<!-- end Make a payment Header widget -->
