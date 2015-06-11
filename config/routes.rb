@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   resources :users
   resources :equipments
+  resources :program_sessions
+  get '/wishlist' => 'wishlist#index'
+  
   # /users          (index)
   # /users/:id      (show)
   # /users/new      (new)
