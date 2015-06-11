@@ -4,5 +4,4 @@ class WishlistController < ApplicationController
 
   def show
   end
-
 end
