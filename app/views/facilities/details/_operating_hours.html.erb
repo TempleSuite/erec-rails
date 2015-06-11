@@ -3,7 +3,7 @@
    # Print out a schedule row
    #
    # @param 'type'  string identifier for the type of row to print out
-   # @param 'row'   string identifier for the type of row to print out
+   # @param 'day_name'   string identifier for the type of row to print out
    # @return null
    #
    # @author Adrian Estergaard <theturtlemoves@gmail.com>
@@ -23,7 +23,7 @@
         </div> <!-- end inline group -->
       </div>
       <div class='col-xs-2'>
-        <span><%= Date::DAYNAMES[row_index] %></span>
+        <span><%= day_name %></span>
       </div>
       <div class='col-xs-2'>
         <label>
