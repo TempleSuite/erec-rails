@@ -1,0 +1,12 @@
+<section id="widget-grid">
+  <div class="row">
+    <article class="col-sm-12 col-md-12 col-lg-8">
+      <%= render_widget 'wishlist', buttons: { sortable: 'true', collapsed: 'true', colorbutton: 'false', editbutton: 'false', togglebutton: 'false', deletebutton: 'false', fullscreenbutton: 'false', custombutton: 'false' } %>
+    </article>
+
+    <article class="col-sm-12 col-md-12 col-lg-4">
+      <%= render_widget 'carousel' %>
+      <%= render_widget 'discount_codes' %>
+    </article>
+  </div>
+</section>
