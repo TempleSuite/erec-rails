@@ -6,7 +6,7 @@
       <%= render_widget 'profile/emergency_contact' %>
 
       <!-- render Collectives widget -->
-      <%= render partial: 'shared/widget_associations',
+      <%= render partial: 'shared/widget_associations', locals: {
         title: 'Collectives',
         id: 'wid-id-profile-collectives',
         badge_qty: '2',
@@ -20,11 +20,12 @@
             url: '/img/superbox/seniors-swimming-club.jpg',
             title: 'Seniors Swimming Club'
           }
-        ] %>
+        ]
+      } %>
       <!-- end render Collectives widget -->
 
       <!-- render Friends widget -->
-      <%= render partial: 'shared/widget_associations',
+      <%= render partial: 'shared/widget_associations', locals: {
         title: 'Friends',
         id: 'wid-id-profile-friends',
         badge_qty: '2',
@@ -38,11 +39,12 @@
             url: '/img/avatars/7.jpg',
             title: 'Kate Doe'
           }
-        ] %>
+        ]
+      } %>
       <!-- end render Friends widget -->
 
       <!-- render Dependents widget -->
-      <%= render partial: 'shared/widget_associations',
+      <%= render partial: 'shared/widget_associations', locals: {
         title: 'Dependents',
         id: 'wid-id-profile-dependents',
         badge_qty: '3',
@@ -56,10 +58,12 @@
             url: '/img/avatars/5.png',
             title: 'Anne Doe'
           }, {
+
             url: '/img/avatars/female.png',
             title: 'Nina Ames'
           }
-        ] %>
+        ]
+      } %>
       <!-- end render Dependents widget -->
 
       <%= render_widget 'profile/billing_details' %>
