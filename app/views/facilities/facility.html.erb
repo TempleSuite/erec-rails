@@ -1,21 +1,21 @@
 <section id="widget-grid">
   <div class="row">
     <article class="col-sm-12 col-md-12 col-lg-8">
-      <%= render partial: 'facility/details' %>
-      <%= render partial: 'facility/information' %>
-      <%= render partial: 'facility/subfacilities' %>
-      <%= render partial: 'widgets/map' %>
-      <%= render partial: 'widgets/calendar' %>
-      <%= render partial: 'widgets/document_centre' %>
+      <%= render_widget: 'facility/details' %>
+      <%= render_widget: 'facility/information' %>
+      <%= render_widget: 'facility/subfacilities' %>
+      <%= render_widget: 'widgets/map' %>
+      <%= render_widget: 'widgets/calendar' %>
+      <%= render_widget: 'widgets/document_centre' %>
 
       <!-- render Equipment widget -->
        <%= render partial:'widget_associations', locals: {
-        'title'        => 'Equipment Inventory',
-        'id'           => 'wid-id-facility-equipment',
-        'badge-qty'    => '2',
-        'type'         => 'equipment',
-        'edit_id'      => 'facility-equipment',
-        'associations' => [
+        title: 'Equipment Inventory',
+        id: 'wid-id-facility-equipment',
+        badge_qty: '2',
+        type: 'equipment',
+        edit_id: 'facility-equipment',
+        associations: [
           {
             url: '/img/superbox/swimming-tubes.jpg',
             title: 'Swimming Tubes (20)'
@@ -31,12 +31,11 @@
     </article>
 
     <article class="col-sm-12 col-md-12 col-lg-4">
-      <%= render partial: 'social_media' %>
-      <%= render partial: 'carousel' %>
-      <%= render partial: 'supervisor' %>
-      <%= render partial: 'discount_codes' %>
-      <%= render partial: 'access_codes' %>
+      <%= render_widget: 'social_media' %>
+      <%= render_widget: 'carousel' %>
+      <%= render_widget: 'supervisor' %>
+      <%= render_widget: 'discount_codes' %>
+      <%= render_widget: 'access_codes' %>
     </article>
   </div>
 </section>
-

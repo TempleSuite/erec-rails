@@ -1,23 +1,10 @@
-<%
-  ###
-   # Single Search Result
-   #
-   # @param real 'rating'    The real number value of the rating
-   # @return null
-   #
-   # @author Adrian Estergaard <theturtlemoves@gmail.com>
-  ###
-
-  rating ||= 3.0
-%>
-
 <form action="" id='<%= form_id %>' class="smart-form">
   <div class="fieldset">
     <% Date::DAYNAMES.each do |day_name| %>
-      render partial: 'facilities/details/list_operating_hours_row', locals: {
+      <%=render partial: 'facilities/details/operating_hours', locals: {
         type:     type,
         row_index: day_name
-        }
+        } %>
     <% end %>
 
     <!-- Add Button Row -->
