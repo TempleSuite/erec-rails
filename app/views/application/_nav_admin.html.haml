@@ -1,0 +1,57 @@
+%aside#left-panel
+  %nav
+    %ul
+      %li
+        = link_to root_path do
+          %i.fa.fa-lg.fa-fw.fa-home
+          %span.menu-item-parent Dashboard
+
+      %li
+        = link_to user_path(id: 1) do
+          %i.fa.fa-lg.fa-fw.fa-user
+          %span.menu-item-parent Members
+
+      %li
+        = link_to facility_path(id: 1) do
+          %i.fa.fa-lg.fa-fw.fa-building-o
+          %span.menu-item-parent Facilities
+
+      %li
+        = link_to '#', class: 'disabled' do
+          %i.fa.fa-lg.fa-fw.fa-files-o
+          %span.menu-item-parent Programs
+
+      %li
+        = link_to '#', class: 'disabled' do
+          %i.fa.fa-lg.fa-fw.fa-globe
+          %span.menu-item-parent Classes
+
+      %li
+        = link_to equipment_path(id: 1) do
+          %i.fa.fa-lg.fa-fw.fa-life-ring
+          %span.menu-item-parent Equipment
+
+      %li
+        = link_to '#', class: 'disabled' do
+          %i.fa.fa-lg.fa-fw.fa-tasks
+          %span.menu-item-parent Jobs
+
+      %li
+        = link_to '#', class: 'disabled' do
+          %i.fa.fa-lg.fa-fw.fa-shopping-cart
+          %span.menu-item-parent Products
+
+      %li
+        = link_to '#', class: 'disabled' do
+          %i.fa.fa-lg.fa-fw.fa-ticket
+          %span.menu-item-parent Passes
+
+      %li
+        = link_to '#', class: 'disabled' do
+          %i.fa.fa-lg.fa-fw.fa-shopping-cart
+          %span.menu-item-parent Store
+
+      %li
+        = link_to wishlist_path do
+          %i.fa.fa-lg.fa-fw.fa-list
+          %span.menu-item-parent Wishlist
