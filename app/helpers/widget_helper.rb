@@ -1,14 +1,14 @@
 module WidgetHelper
   def render_widget(name, buttons:{}, locals:{})
     data_hash = [
-      'colorbutton',
-      'editbutton',
-      'togglebutton',
-      'deletebutton',
-      'fullscreenbutton',
-      'custombutton',
-      'collapsed',
-      'sortable'
+      :colorbutton,
+      :editbutton,
+      :togglebutton,
+      :deletebutton,
+      :fullscreenbutton,
+      :custombutton,
+      :collapsed,
+      :sortable
     ].map do |option|
       [
         "widget-#{option}=",
