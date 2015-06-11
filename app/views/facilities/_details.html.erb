@@ -1,5 +1,5 @@
 <header>
-  <?php render_partial('edit_button', array('title' => 'facility-details')); ?>
+  <%= render partial: 'shared/edit_button', locals: { title: 'facility-details' } %>
   <span class="widget-icon"> <i class="fa fa-list-alt txt-color-white"></i> </span>
   <h2> Details </h2>
 </header>
@@ -13,8 +13,8 @@
             <div class="row">
               <div class="col-xs-12">
                 <div class="responsive-box-lg details">
-                  <img src="/img/superbox/maple-ridge-pool.jpg" alt="Maple Ridge Pool" class="icon-lg" id="photo">
-                  <img src="img/edit.png" class="edit-image hidden-xs" data-expands="#facility-edit-image">
+                  <%= image_tag 'superbox/maple-ridge-pool.jpg', alt: 'Maple Ridge Pool', class: 'icon-lg', id: 'photo' %>
+                  <%= image_tag 'edit.png', class: 'edit-image hidden-xs', :'data-expands' => '#facility-edit-image' %>
                   <label class="label"><strong>Maple Ridge Pool</strong></label>
 
                   <div class="id-number">
@@ -25,7 +25,7 @@
                   <label class="label"><strong>Location:</strong> Greg Moore Centre </label>
                   <label class="label"><strong>Capacity:</strong> 50</label>
 
-                  <?php $this->partial('edit_image'); ?>
+                  <%= render partial: 'shared/edit_image' %>
                 </div>
 
                 <div class="responsive-box-xl lean-right" style="max-width: 400px;">
@@ -36,10 +36,10 @@
               </div>
 
               <div class="col-xs-12">
-                <div class="responsive-box-lg " >
-                  <?php render_partial('rating', array('rating' => isset($locals['rating']) ? $locals['rating'] : '3.0')); ?>
+                <div class="responsive-box-lg">
+                  <%= render partial: 'shared/rating',  locals: { rating: 3.0 } %>
                   <a href="#" class="enter-comments" data-expands="#facility-enter-comments">Enter Comments</a>
-                  <?php $this->partial('enter_comments'); ?>
+                  <%= render partial: 'shared/enter_comments' %>
                 </div>
 
                 <div class="responsive-box-xl lean-right" style="max-width: 400px;">
@@ -49,11 +49,11 @@
                   </p>
                 </div>
 
-                <?php $this->partial('session_hours'); ?>
+                <%= render partial: 'facilities/details/session_hours' %>
               </div>
             </div>
             <!-- Hidden Update Button Row -->
-            <?php render_partial('edit_row', array('title' => 'facility-details')); ?>
+             <%= render partial:'shared/edit_row', locals: { title: 'facility-details' } %>
             <!-- End Hidden Update Button Row -->
           </fieldset>
         </form>

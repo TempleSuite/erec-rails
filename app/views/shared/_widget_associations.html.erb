@@ -1,0 +1,85 @@
+<%
+  ###
+  #
+  #
+  # @param string 'title' Name of the widget - appears on the header
+  # @param string 'id'    unique id value for the widget
+  # @param string 'edit_id'   value to be used for edit button & hidden update row
+  # @param array(strings) 'associations'  string of csv
+  #            string img URL for associated item,
+  #            string title of the associated items
+  #
+  # @author Adrian Estergaard <theturtlemoves@gmail.com>
+  #
+  #
+  ###
+%>
+
+<!-- Profile Collectives widget -->
+<%= content_tag :div,
+  class: 'jarviswidget jarviswidget-color-blueDark',
+  id: id,
+  data: {
+    :'badge-num' => badge_qty,
+    :'widget-editbutton' => 'false',
+    :'widget-fullscreenbutton' => 'false',
+    :'widget-colorbutton' => 'false'
+do %>
+  <header>
+    <%= render partial: 'shared/edit_button', locals: { title: edit_id } %>
+    <span class="widget-icon"> <i class="fa fa-image txt-color-white"></i> </span>
+    <div class="widget-toolbar">
+      <h2> <%= title %> </h2>
+      <% if badge_qty.nil? %>
+        <div class="badge bg-color-blue"><%= badge_qty %></div>
+      <% end %>
+    </div>
+  </header>
+
+  <!-- widget div-->
+
+  <div>
+    <div class="widget-body widget-hide-overflow no-padding">
+      <!-- content goes here -->
+      <div class="widget-body no-padding">
+        <div class="panel-body well">
+          <form action="" id="profile-collectives-form" class="smart-form" novalidate="novalidate">
+            <fieldset>
+              <div class="row">
+                <div class="col-xs-12 list editable-list" id="list-<%= id %>">
+                  <% permissions = [ 'admin', 'developer' ] unless defined? permissions %>
+
+                  <% associations.each { %>
+                    <div class='responsive-box-md can-be-closed'>
+                      <div class='row'>
+                        <div class='col-xs-12'>
+                          <%= image_tag image_src, alt: title, class: 'icon-sm icon-assoc' %>
+                          <% if permissions.admin? %>
+                            <%= image_tag 'clear.png', class: 'close-image hidden-xs' %>
+                          <% end %>
+                        </div>
+                      </div>
+                      <div class='row'>
+                        <div class='col-xs-12'>
+                          <label><%= title %></label>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+              <!-- Hidden Update Button Row -->
+              <?php render_partial('add_association', array('title' => $locals['edit_id'], 'type' => $locals['type'])); ?>
+              <%= render partial:'add_association', locals: { title: 'edit_id', type: 'type' } %>
+              <!-- End Hidden Update Button Row -->
+            </fieldset>
+          </form>
+        </div>
+        <!-- end of panel-body -->
+      </div>
+      <!-- end content -->
+    </div>
+  </div>
+  <!-- end widget div -->
+<!-- end Profile Collectives widget -->
+<% end # .jarviswidget %>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :equipments
+  resources :facilities
   # /users          (index)
   # /users/:id      (show)
   # /users/new      (new)

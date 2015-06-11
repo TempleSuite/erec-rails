@@ -1,0 +1,21 @@
+<form action="" id='<%= form_id %>' class="smart-form">
+  <div class="fieldset">
+    <% Date::DAYNAMES.each do |day_name| %>
+      <%=render partial: 'facilities/details/operating_hours', locals: {
+        type:     type,
+        row_index: day_name
+        } %>
+    <% end %>
+
+    <!-- Add Button Row -->
+    <div class="row">
+      <footer>
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-primary btn-sm">Update</button>
+        </div>
+      </footer>
+    </div>
+    <!-- End Add Button Row -->
+
+  </div>
+</form>
