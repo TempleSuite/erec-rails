@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :facilities
 
   get '/wishlist' => 'wishlist#index'
+  get '/equipment' => 'equipments#show'
+
   # /users          (index)
   # /users/:id      (show)
   # /users/new      (new)
