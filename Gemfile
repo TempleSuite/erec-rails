@@ -21,8 +21,6 @@ gem 'devise'
 gem 'pundit'
 gem 'draper'
 gem 'kaminari'
-
-gem 'factory_girl_rails'
 gem 'faker'
 
 gem 'simple_form'
@@ -64,6 +62,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'bullet'
+  gem 'factory_girl_rails'
 end
 
 source 'https://rails-assets.org' do
