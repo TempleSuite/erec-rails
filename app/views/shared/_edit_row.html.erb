@@ -7,7 +7,7 @@
 # @author Adrian Estergaard <theturtlemoves@gmail.com>
 ###
 
-button_text = 'Update' unless defined?(button_text)
+button_text = 'Update' unless button_text.present?
 %>
 
 <div class='row hidden-button hidden' data-row='<%= title %>'>
