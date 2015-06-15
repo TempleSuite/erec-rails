@@ -1,16 +1,14 @@
 $(document).ready(function() {
   $('.form-edit-button').click(function(e) {
     e.preventDefault();
-    var elem = $(this);
     // toggle visibility of hidden button
-    $('[data-row=' + elem.data("form") + ']').toggleClass('hidden');
+    $('[data-row=' + $(this).data("form") + ']').toggleClass('hidden');
   });
 
   /* Update Widget Button - hides itself on click */
   $('.update-button').on('click', function(e) {
     e.preventDefault();
-    var elem = $(this);
-    hideButton(elem);
+    hideButton($(this));
   });
 
   /* Hide the clicked Update Widget Button */
