@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  //validation 
+  //validation
   var $checkoutForm = $('#facility-information-form').validate({
     // Rules for form validation
     rules : {
@@ -20,7 +20,7 @@ $(document).ready(function() {
         letters: true
       },
       address : {
-        required : true 
+        required : true
       },
       unit : {
         required : true,
@@ -82,5 +82,5 @@ $(document).ready(function() {
         return true;
     }
     return false;
-  });  
+  });
 });

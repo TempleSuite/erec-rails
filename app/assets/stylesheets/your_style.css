@@ -425,7 +425,7 @@ button.btn.btn-danger.btn-xs {
 .responsive-box-lg,
 .responsive-box-xl {
   display: inline-block;
-  padding-right: 20px;
+  padding-right: 17px;
   margin-bottom: 5px;
   vertical-align: top;
 }
@@ -498,7 +498,7 @@ button.btn.btn-danger.btn-xs {
 #widget-grid [id^=wid-id-] .select {
   width: inherit !important;
   height:22px;
-  padding-left:7px;
+  padding-left:0px;
 }
 
 .responsive-box-tiny .select,
