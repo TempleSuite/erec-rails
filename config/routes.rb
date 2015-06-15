@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   # /users          (index)
   # /users/:id      (show)
   # /users/new      (new)
-  # /users/new POST (create)``
+  # /users/new POST (create)
   # /users/:id/edit PATCH (update)
   # /users/:id/edit (edit)
 
