@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get '/wishlist' => 'wishlist#index'
   get '/equipment' => 'equipments#show'
+  get '/facility' => 'facilities#show'
 
   # /users          (index)
   # /users/:id      (show)

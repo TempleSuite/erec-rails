@@ -1,12 +1,12 @@
 <section id="widget-grid">
   <div class="row">
     <article class="col-sm-12 col-md-12 col-lg-8">
-      <%= render_widget 'facilities/details' %>
-      <%= render_widget 'facilities/information' %>
-      <%= render_widget 'facilities/subfacilities' %>
-      <%= render_widget 'widgets/map' %>
-      <%= render_widget 'widgets/calendar' %>
-      <%= render_widget 'widgets/document_centre' %>
+      <%= render_widget '../facilities/details' %>
+      <%= render_widget '../facilities/information' %>
+      <%= render_widget '../facilities/subfacilities' %>
+      <%= render_widget 'map' %>
+      <%= render_widget 'calendar' %>
+      <%= render_widget 'document_centre' %>
 
       <!-- render Equipment widget -->
        <%= render partial: 'shared/widget_associations', locals: {
@@ -17,17 +17,17 @@
         edit_id:      'facility-equipment',
         associations: [
           {
-            url: '/img/superbox/swimming-tubes.jpg',
+            url: 'superbox/swimming-tubes.jpg',
             title: 'Swimming Tubes (20)'
           }, {
-            url: '/img/superbox/life-jacket.jpg',
+            url: 'superbox/life-jacket.jpg',
             title: 'Life Jacket (45)'
           }
         ]
       } %>
       <!-- end render Equipment widget -->
 
-      <%= render_widget 'shared/gl_mapping' %>
+      <%= render_widget 'gl_mapping' %>
     </article>
 
     <article class="col-sm-12 col-md-12 col-lg-4">

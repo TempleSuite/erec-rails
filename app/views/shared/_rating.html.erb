@@ -1,6 +1,6 @@
 <%
   ###
-   # Single Search Result
+   # Display the Rating for a single thing based on the value being passed to it
    #
    # @param real 'rating'    The real number value of the rating
    # @return null
@@ -15,4 +15,4 @@
 Rating:
 <%= rating.to_i.times.map { "<i class='fa fa-star'></i> " }.join.html_safe %>
 <%= "<i class='fa fa-star-half-o'></i>".html_safe if rating % 1 != 0 %>
-<%= (5 - rating.to_i).times.map { "<i class='fa fa-star-o'></i> " }.join.html_safe %>
+<%= (4 - rating.to_i).times.map { "<i class='fa fa-star-o'></i> " }.join.html_safe %>
