@@ -78,4 +78,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-ui'
   gem 'rails-assets-jquery-validate'
   gem 'rails-assets-select2'
+  gem 'rails-assets-fullcalendar'
 end
