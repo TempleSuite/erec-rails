@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<markers>
+	<marker>
+		<image>img/avatars/Oak-Bay-Recreation-Centre-Victoria-BC.jpg</image>
+		<name>Oak Bay Recreation Centre</name>
+		<address>1975 Bee Street, Victoria, BC V8R 5E6</address>
+		<content>open: 8:30 am – 9:00 pm</content>
+		<icons>sa-default</icons>
+		<link>http://www.google.com</link>
+	</marker>
+
+	<marker>
+		<image>img/avatars/Cedar-Hill-Recreation-Centre-Victoria-BC.jpg</image>
+		<name>Cedar Hill Recreation Centre</name>
+		<address> 3220 Cedar Hill Rd, Victoria, BC V8P 3Y3</address>
+		<content>open: 8:30 am – 9:00 pm</content>
+		<icons>sa-default</icons>
+		<link>http://www.google.com</link>
+	</marker>
+
+</markers>

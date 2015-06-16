@@ -1,0 +1,60 @@
+- @page_title = 'Register'
+
+.row
+  .col-xs-12.col-sm-12.col-md-5.col-lg-4.center
+    .well.no-padding
+      = simple_form_for @user, html: { class: 'smart-form' } do |f|
+        %header Registration is FREE*
+
+        %fieldset
+          = f.input :email
+          = f.input :password
+          = f.input :password_confirmation
+
+        %fieldset
+          .row
+            .col-sm-6.col-xs-12
+              = f.input :first_name
+            .col-sm-6.col-xs-12
+              = f.input :last_name
+          .row
+            .col-sm-6.col-xs-6
+              = f.input :gender
+          .row
+            .col-xs-12
+              =# f.input :subscription, as: :checkbox
+          .row
+            .col-xs-12
+              =# f.input :terms, as: :checkbox
+
+        %footer
+          = f.button :submit
+
+        .message
+          %i.fa.fa-check
+          %p Thank you for your registration!
+
+    %h5.text-center - Or sign in using -
+    %ul.list-inline.text-center
+      %li= link_to '#', '<i class="fa fa-facebook"></i>', class: 'btn btn-primary btn-circle'
+      %li= link_to '#', '<i class="fa fa-twitter"></i>', class: 'btn btn-info btn-circle'
+
+.modal.fade#myModal(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close(data-dismiss="modal" aria-hidden="true") &times;
+        %h4.modal-title#myModalLabel Terms & Conditions
+      .modal-body.custom-scroll.terms-body
+        #left
+          = render partial: 'terms_and_conditions'
+
+        .modal-footer
+          %button.btn.btn-default(data-dismiss="modal") Cancel
+          %button.btn.btn-primary#i-agree(style="margin-top: -10px;")
+            %i.fa.fa-check
+            I Agree
+
+          %button.btn.btn-danger.pull-left#print
+            %i.fa.fa-print
+            Print
