@@ -6,7 +6,7 @@ db:
     - POSTGRES_PASSWORD=docker_pass
 web:
   build: .
-  command: bundle exec rails s -p 3000 -b '0.0.0.0'
+  command: bundle exec rails s -e development -p 3000 -b '0.0.0.0' webrick
   volumes:
     - .:/code
   volumes_from:
