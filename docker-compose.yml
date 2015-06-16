@@ -1,9 +1,3 @@
-db:
-  image: postgres
-  ports:
-    - '5432'
-  environment:
-    - POSTGRES_PASSWORD=docker_pass
 web:
   build: .
   command: bundle exec rails s -e development -p 3000 -b '0.0.0.0' webrick
@@ -13,8 +7,6 @@ web:
     - bundle
   ports:
     - '3000:3000'
-  links:
-    - db
   environment:
     - RAILS_ENV=development
     - BUNDLE_APP_CONFIG=/code/.bundle

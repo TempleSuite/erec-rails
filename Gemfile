@@ -15,7 +15,6 @@ gem 'turbolinks'
 gem 'active_model_serializers'
 gem 'angularjs-rails-resource'
 
-gem 'pg'
 gem 'devise'
 gem 'pundit'
 gem 'draper'
@@ -36,6 +35,7 @@ group :production, :staging do
   gem 'rails_12factor'
   gem 'puma'
   gem 'rack-timeout'
+  gem 'pg'
 end
 
 # Use ActiveModel has_secure_password
@@ -56,7 +56,6 @@ group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'better_errors'
   gem 'rspec-rails'
   gem 'fuubar'
@@ -65,6 +64,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'bullet'
   gem 'factory_girl_rails'
+  gem 'sqlite3'
 end
 
 source 'https://rails-assets.org' do
@@ -80,4 +80,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-ui'
   gem 'rails-assets-jquery-validate'
   gem 'rails-assets-select2'
+  gem 'rails-assets-fullcalendar'
+  gem 'rails-assets-momentjs'
 end
